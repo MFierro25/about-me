@@ -74,23 +74,59 @@ alert('Sadly, no, I am a Cali boy.');
 alert('Correct, I am so sorry, born in Orange County, CA.');
     guesscount +=1;
 } 
-function swGame(){
-    let answer = prompt('Who is my favorite Star Wars character of all time?')
-    let correctAnswer = ['Darth Vader', 'Boba Fett' , 'Han Solo'];
+
+let correctAnswer = 39;
+let wannaPlay = prompt('Do you want to play a silly game about me? (Yes or Nah)');
+let playTheGame = wannaPlay.toLowerCase() == 'yes';
+console.log(wannaPlay);
+let wonTheGame = false;
+if (playTheGame){
+    let numberOfAttempts = 4;
+    for (let i = 1; i <= numberOfAttempts; i++){
+        let userAnswer = prompt("So, for real, how old do you think I am?");
+        console.log(i)
+        if (userAnswer == correctAnswer){ /// then...
+            wonTheGame = true;
+            alert ('Dang! You\'re good! I must look my age.');
+            guessCount += 1;
+            break;
+        }
+        else {
+            if(userAnswer < correctAnswer){
+                alert(`Not quite, you\'re sweet but your answer is too low. Try Again! You have  ${numberOfAttempts -i}  attempts left`);
+            } else if (userAnswer > correctAnswer){
+                alert(`WOW! Do I look THAT old?! Your answer is too high. Try Again! You have ${numberOfAttempts -i}  attempts left`);
+            }
+        }
+    } 
+}
+if (wonTheGame){
+    alert(`You killed this ${userName} you won, way to go!`);
+}
+else {
+    alert ('Well, believe it or not, I am actually 39. Which is pretty much 40...bummer.');
+    alert(`Thank you ${userName} for playing this guessing game.`);
+}
+
+
+    let swGame = prompt('Do you wanna play a game about my favorite, and also the best, movie on earth?');
+    console.log(swGame);
+    if (swGame){
+
+    let answer = prompt('Who is my favorite Star Wars character of all time?').toLowerCase();
+    let correctAnswer = ['darth vader', 'boba fett' ];
     let numberOfAttempts = 6;
     for(let i = 1; i <= numberOfAttempts; i++){
         console.log("correct answer" , correctAnswer)
         console.log("your answer" , answer)
         if(correctAnswer[0] == answer || correctAnswer[1] == answer){
-            alert("Yesss, feeel the darkside flow through you.")
-            correctAnswer++;
+            alert("Yesss, feeel the darkside flow through you.");
+            guesscount+= 1;
             break;
         } else {
-        alert('Rebel Scum, you got it wrong! The empire has granted you ' + (numberOfAttempts = i) + ' more attempts.')
+        alert('Rebel Scum, you got it wrong! The empire has granted you ' + (numberOfAttempts = i) + ' more attempts.');
         }
         answer = prompt('Now who is my favorite character?').toLowerCase();
     }
 }
-swGame()
-
-alert('You have been granted ' + correctAnswer + ' out of 7 correct.');
+alert('You have been granted ' + guesscount + ' out of 7 correct.');
