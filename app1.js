@@ -75,6 +75,7 @@ alert('Correct, I am so sorry, born in Orange County, CA.');
     guesscount +=1;
 } 
 
+function ageguessgame() {
 let correctAnswer = 39;
 let wannaPlay = prompt('Do you want to play a silly game about me? (Yes or Nah)');
 let playTheGame = wannaPlay.toLowerCase() == 'yes';
@@ -107,7 +108,9 @@ else {
     alert ('Well, believe it or not, I am actually 39. Which is pretty much 40...bummer.');
     alert(`Thank you ${userName} for playing this guessing game.`);
 }
+}
 
+ageguessgame()
 
     let swGame = prompt('Do you wanna play a game about my favorite, and also the best, movie on earth?');
     console.log(swGame);
