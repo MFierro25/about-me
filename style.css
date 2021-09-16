@@ -1,28 +1,37 @@
 html, body{
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
 }
-.nav ul {
-    margin: 0;
-    text-align: center;
-    color: orangered;
-    font-size: large;
+.main-body {
+    background-image: url(https://wallpaperaccess.com/full/2124490.jpg);
+    background-size: contain;
 }
 .main-header {
     background-image: url(https://64.media.tumblr.com/2a6d0b58e6bb3414e18581849bb0b6aa/0d88205535511d2d-0b/s640x960/bcb6a78b50a59f2ed1bd27fcf767228d46217836.png);
     background-size: cover;
+    border-style: double;
     padding-bottom: 30px;
     text-align: center;
     color: red;
     font-size: x-large;
     font-family: Arial, Helvetica, sans-serif;
 }
-.main-body {
-    background-image: url(https://wallpaperaccess.com/full/2124490.jpg);
-    background-size: contain;
+.nav ul {
+    display: inline;
+    color: orangered;
+    font-size: large;
 }
 .about-me {
+    background-color: transparent;
     text-align: center;
     font-size: large;
     color: chartreuse;
+    border-style: double;
+}
+.tenthings {
+    background-color: transparent;
+    text-align: center;
+    font-size: large;
+    color: gray;
+    border-style: solid;
 }
